@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>CreditOne.Microservices.Account.Repository</AssemblyName>
+    <RootNamespace>CreditOne.Microservices.Account.Repository</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Account.Domain.csproj" />
+    <ProjectReference Include="..\IDataProvider\Account.IDataProvider.csproj" />
+  </ItemGroup>
+
+</Project>

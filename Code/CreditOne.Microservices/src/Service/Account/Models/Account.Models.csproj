@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>CreditOne.Microservices.Account.Models</AssemblyName>
+    <RootNamespace>CreditOne.Microservices.Account.Models</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.MaskEncryptSensitiveData">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\Logger\v1.0.0\CreditOne.Microservices.BuildingBlocks.MaskEncryptSensitiveData.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.RequestValidationFilter">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\RequestValidationFilter\v1.0.0\CreditOne.Microservices.BuildingBlocks.RequestValidationFilter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

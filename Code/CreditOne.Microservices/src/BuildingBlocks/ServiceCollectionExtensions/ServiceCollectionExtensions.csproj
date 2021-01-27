@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>CreditOne.Microservices.BuildingBlocks.ServiceCollectionExtensions</AssemblyName>
+    <RootNamespace>CreditOne.Microservices.BuildingBlocks.ServiceCollectionExtensions</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigReader\ConfigReader.csproj" />
+    <ProjectReference Include="..\Configuration\Common.Configuration.csproj" />
+    <ProjectReference Include="..\EncryptionInfo\EncryptionInfo.csproj" />
+    <ProjectReference Include="..\Encryption\Encryption.csproj" />
+    <ProjectReference Include="..\NotificationAgents\NotificationAgents.csproj" />
+    <ProjectReference Include="..\PerformanceMonitor\Configuration\PerformanceMonitor.Configuration.csproj" />
+    <ProjectReference Include="..\PerformanceMonitor\Database\PerformanceMonitor.Database.csproj" />
+  </ItemGroup>
+
+</Project>

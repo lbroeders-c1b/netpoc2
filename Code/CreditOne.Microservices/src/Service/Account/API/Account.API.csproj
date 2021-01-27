@@ -1,0 +1,93 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>CreditOne.Microservices.Account.API</AssemblyName>
+    <RootNamespace>CreditOne.Microservices.Account.API</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\netcoreapp2.1\</OutputPath>
+    <DocumentationFile>bin\Debug\netcoreapp2.1\CreditOne.Microservices.Account.API.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\Release\netcoreapp2.1\</OutputPath>
+    <DocumentationFile>bin\Release\netcoreapp2.1\CreditOne.Microservices.Account.API.xml</DocumentationFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Account.Domain.csproj" />
+    <ProjectReference Include="..\Models\Account.Models.csproj" />
+    <ProjectReference Include="..\OracleDataProvider\Account.OracleDataProvider.csproj" />
+    <ProjectReference Include="..\Repository\Account.Repository.csproj" />
+    <ProjectReference Include="..\Service\Account.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.Common.Configuration">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\Common.Configuration\v1.0.0\CreditOne.Microservices.BuildingBlocks.Common.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.ConfigReader">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\ServiceCollectionExtensions\v1.0.0\CreditOne.Microservices.BuildingBlocks.ConfigReader.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.Encryption">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\ServiceCollectionExtensions\v1.0.0\CreditOne.Microservices.BuildingBlocks.Encryption.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.EncryptionInfo">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\ServiceCollectionExtensions\v1.0.0\CreditOne.Microservices.BuildingBlocks.EncryptionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.ExceptionFilters">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\ExceptionFilters\v1.0.0\CreditOne.Microservices.BuildingBlocks.ExceptionFilters.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.HttpExtensions">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\ExceptionFilters\v1.0.0\CreditOne.Microservices.BuildingBlocks.HttpExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.Logger">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\Logger\v1.0.0\CreditOne.Microservices.BuildingBlocks.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.LoggingFilter">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\LoggingFilter\v1.0.0\CreditOne.Microservices.BuildingBlocks.LoggingFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.MaskEncryptSensitiveData">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\Logger\v1.0.0\CreditOne.Microservices.BuildingBlocks.MaskEncryptSensitiveData.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.NotificationAgents">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\ServiceCollectionExtensions\v1.0.0\CreditOne.Microservices.BuildingBlocks.NotificationAgents.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.OracleProvider.Core">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\OracleProvider.Core\v1.0.0\CreditOne.Microservices.BuildingBlocks.OracleProvider.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.PerformanceMonitor.Base">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\PerformanceMonitor\v1.0.0\CreditOne.Microservices.BuildingBlocks.PerformanceMonitor.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.PerformanceMonitor.Configuration">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\ServiceCollectionExtensions\v1.0.0\CreditOne.Microservices.BuildingBlocks.PerformanceMonitor.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.PerformanceMonitor.Database">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\ServiceCollectionExtensions\v1.0.0\CreditOne.Microservices.BuildingBlocks.PerformanceMonitor.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.RequestValidationFilter">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\RequestValidationFilter\v1.0.0\CreditOne.Microservices.BuildingBlocks.RequestValidationFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.ServiceCollectionExtensions">
+      <HintPath>..\..\..\..\..\lib\BuildingBlocks\ServiceCollectionExtensions\v1.0.0\CreditOne.Microservices.BuildingBlocks.ServiceCollectionExtensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

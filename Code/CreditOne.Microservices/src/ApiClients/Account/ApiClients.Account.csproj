@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>CreditOne.Microservices.ApiClients.Account</AssemblyName>
+    <RootNamespace>CreditOne.Microservices.ApiClients.Account</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.BearerTokenProvider">
+      <HintPath>..\..\..\..\lib\BuildingBlocks\BearerTokenProvider\v1.0.0\CreditOne.Microservices.BuildingBlocks.BearerTokenProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.Common.Configuration">
+      <HintPath>..\..\..\..\lib\BuildingBlocks\Common.Configuration\v1.0.0\CreditOne.Microservices.BuildingBlocks.Common.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditOne.Microservices.BuildingBlocks.Common.HttpClient">
+      <HintPath>..\..\..\..\lib\BuildingBlocks\Common.HttpClient\v1.0.0\CreditOne.Microservices.BuildingBlocks.Common.HttpClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

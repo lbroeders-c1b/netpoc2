@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>CreditOne.Microservices.BuildingBlocks.PerformanceMonitor.Base</AssemblyName>
+    <RootNamespace>CreditOne.Microservices.BuildingBlocks.PerformanceMonitor.Base</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NotificationAgents\NotificationAgents.csproj" />
+    <ProjectReference Include="..\PerformanceMonitor\Configuration\PerformanceMonitor.Configuration.csproj" />
+  </ItemGroup>
+
+</Project>
