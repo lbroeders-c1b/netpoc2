@@ -58,8 +58,10 @@ namespace CreditOne.Microservices.Account.Repository.Test
             var result = _customerRepository.GetById(It.IsAny<decimal>()).Result;
 
             // Asert
-            //Assert.IsNotNull(result);
-            Assert.IsNull(result);
+            Assert.IsNotNull(result);
+
+            //Enable this line to force the test to fail
+            //Assert.IsNull(result);
         }
     }
 }
